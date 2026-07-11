@@ -32,7 +32,6 @@
     min-height: 100vh;
   }
 
-  /* ── Top bar ── */
   .topbar {
     position: sticky;
     top: 0;
@@ -64,7 +63,6 @@
   .topbar-sep { color: var(--border); margin: 0 4px; }
   .topbar-page { font-size: 13px; color: var(--muted); }
 
-  /* ── Hero ── */
   .hero {
     padding: 72px 24px 48px;
     max-width: 720px;
@@ -113,7 +111,6 @@
   }
   .hero-meta-item span { color: var(--text); }
 
-  /* ── TL;DR card ── */
   .tldr {
     max-width: 720px;
     margin: 0 auto 48px;
@@ -153,14 +150,12 @@
     margin-top: 1px;
   }
 
-  /* ── Main content ── */
   .content {
     max-width: 720px;
     margin: 0 auto;
     padding: 0 24px 80px;
   }
 
-  /* ── Section ── */
   .section {
     margin-bottom: 48px;
   }
@@ -188,7 +183,6 @@
     color: var(--text);
   }
 
-  /* ── Info card ── */
   .info-card {
     background: var(--card);
     border: 1px solid var(--border);
@@ -210,7 +204,6 @@
   }
   .info-card p + p { margin-top: 8px; }
 
-  /* ── Highlight row ── */
   .highlight-row {
     display: flex;
     align-items: flex-start;
@@ -242,7 +235,6 @@
     line-height: 1.6;
   }
 
-  /* ── Table ── */
   .data-table {
     width: 100%;
     border-collapse: collapse;
@@ -279,7 +271,6 @@
   .tag-yes { background: var(--accent-bg); color: var(--accent); border: 1px solid rgba(74,222,128,0.2); }
   .tag-local { background: rgba(99,102,241,0.1); color: #818CF8; border: 1px solid rgba(99,102,241,0.2); }
 
-  /* ── Danger box ── */
   .danger-box {
     background: rgba(248,113,113,0.06);
     border: 1px solid rgba(248,113,113,0.2);
@@ -289,7 +280,6 @@
   .danger-box .info-card-label { color: var(--danger); }
   .danger-box p { font-size: 14px; color: var(--muted); line-height: 1.7; }
 
-  /* ── Contact ── */
   .contact-card {
     background: var(--card);
     border: 1px solid var(--border);
@@ -314,7 +304,6 @@
   }
   .contact-card a:hover { background: rgba(74,222,128,0.14); }
 
-  /* ── Footer ── */
   footer {
     border-top: 1px solid var(--border);
     padding: 24px;
@@ -336,7 +325,6 @@
 </head>
 <body>
 
-<!-- Top bar -->
 <nav class="topbar">
   <div class="topbar-icon">🔒</div>
   <span class="topbar-name">SecureVaultX</span>
@@ -344,7 +332,6 @@
   <span class="topbar-page">Privacy Policy</span>
 </nav>
 
-<!-- Hero -->
 <header class="hero">
   <div class="hero-badge">PRIVACY POLICY</div>
   <h1>Your data stays<br><span>on your device.</span></h1>
@@ -354,12 +341,11 @@
   </p>
   <div class="hero-meta">
     <div class="hero-meta-item">EFFECTIVE <span>June 2026</span></div>
-    <div class="hero-meta-item">VERSION <span>1.0</span></div>
+    <div class="hero-meta-item">VERSION <span>1.1</span></div>
     <div class="hero-meta-item">PACKAGE <span>com.veyoraa.securevaultx</span></div>
   </div>
 </header>
 
-<!-- TL;DR -->
 <section class="tldr">
   <div class="tldr-card">
     <div class="tldr-label">TL;DR — THE SHORT VERSION</div>
@@ -374,10 +360,8 @@
   </div>
 </section>
 
-<!-- Content -->
 <main class="content">
 
-  <!-- 1. Overview -->
   <div class="section">
     <div class="section-header">
       <span class="section-num">01</span>
@@ -390,7 +374,6 @@
     </div>
   </div>
 
-  <!-- 2. Data we access -->
   <div class="section">
     <div class="section-header">
       <span class="section-num">02</span>
@@ -442,7 +425,6 @@
     </div>
   </div>
 
-  <!-- 3. What we never do -->
   <div class="section">
     <div class="section-header">
       <span class="section-num">03</span>
@@ -487,7 +469,6 @@
     </div>
   </div>
 
-  <!-- 4. Encryption -->
   <div class="section">
     <div class="section-header">
       <span class="section-num">04</span>
@@ -525,7 +506,6 @@
     </div>
   </div>
 
-  <!-- 5. Permissions -->
   <div class="section">
     <div class="section-header">
       <span class="section-num">05</span>
@@ -561,15 +541,22 @@
             <td>Haptic feedback on passcode input</td>
           </tr>
           <tr>
+            <td>RECEIVE_BOOT_COMPLETED / WAKE_LOCK / FOREGROUND_SERVICE</td>
+            <td>Automatic Backup (Pro) scheduling, so a scheduled backup can run after a reboot</td>
+          </tr>
+          <tr>
+            <td>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</td>
+            <td>Lets Automatic Backup (Pro) run reliably in the background if you opt in</td>
+          </tr>
+          <tr>
             <td>INTERNET</td>
-            <td>Google Fonts (loaded at build time, not runtime)</td>
+            <td>Google Fonts (loaded at build time, not runtime) and Google Play Billing for Pro purchases</td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
 
-  <!-- 6. Backup files -->
   <div class="section">
     <div class="section-header">
       <span class="section-num">06</span>
@@ -583,9 +570,12 @@
       <div class="info-card-label">IMPORT</div>
       <p>When you import a backup, the file is decrypted on-device using the password you provide. No data is transmitted during this process.</p>
     </div>
+    <div class="info-card" style="margin-top:12px">
+      <div class="info-card-label">AUTOMATIC BACKUP (PRO)</div>
+      <p>If you enable Automatic Backup, encrypted backup files are created on a schedule and saved directly to a local folder on your device (Download/SecureVaultX). This happens entirely on-device — no backup file, encrypted or otherwise, is ever uploaded anywhere by us.</p>
+    </div>
   </div>
 
-  <!-- 7. In-app purchases -->
   <div class="section">
     <div class="section-header">
       <span class="section-num">07</span>
@@ -593,14 +583,39 @@
     </div>
     <div class="info-card">
       <div class="info-card-label">GOOGLE PLAY BILLING</div>
-      <p>The Pro upgrade (₹99 one-time) is processed entirely through Google Play Billing. SecureVaultX never handles payment information directly. Google's privacy policy governs that transaction. We receive only a confirmation that a purchase was made — no payment details.</p>
+      <p>The Pro upgrade (one-time payment) is processed entirely through Google Play Billing. SecureVaultX never handles payment information directly. Google's privacy policy governs that transaction. We receive only a confirmation that a purchase was made — no card, bank, or payment details.</p>
     </div>
   </div>
 
-  <!-- 8. Children -->
   <div class="section">
     <div class="section-header">
       <span class="section-num">08</span>
+      <span class="section-title">Data retention &amp; deletion</span>
+    </div>
+    <div class="info-card">
+      <div class="info-card-label">HOW LONG DATA IS KEPT</div>
+      <p>Because all vault data lives only on your device, it is retained for as long as you keep it there — there is no remote copy for us to retain or delete on your behalf.</p>
+    </div>
+    <div class="info-card" style="margin-top:12px">
+      <div class="info-card-label">HOW TO DELETE YOUR DATA</div>
+      <p>You can permanently delete individual passwords, notes, or files at any time from within the app. To erase everything at once, use the "Delete All Data" option in Settings, or simply uninstall the app — since nothing is stored outside your device, uninstalling removes all vault data completely and immediately.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">09</span>
+      <span class="section-title">Your rights &amp; choices</span>
+    </div>
+    <div class="info-card">
+      <p>Because SecureVaultX collects no personal data on any server, most data-protection rights (such as those under GDPR or the CCPA/CPRA) that concern requesting a copy of, correcting, or deleting data held by a company simply don't apply here — there is no copy held by us to request, correct, or delete.</p>
+      <p>In practical terms, you already have full and immediate control on-device: you can view, export, correct, or delete any password, note, or file at any time directly within the app, without needing to contact us.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">10</span>
       <span class="section-title">Children's privacy</span>
     </div>
     <div class="danger-box">
@@ -609,28 +624,46 @@
     </div>
   </div>
 
-  <!-- 9. Changes -->
   <div class="section">
     <div class="section-header">
-      <span class="section-num">09</span>
+      <span class="section-num">11</span>
+      <span class="section-title">International use</span>
+    </div>
+    <div class="info-card">
+      <p>SecureVaultX can be used anywhere Google Play distributes it. Because your vault data never leaves your device, there is no cross-border data transfer to disclose — your data stays in the country your device is physically in, at all times.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">12</span>
       <span class="section-title">Changes to this policy</span>
     </div>
     <div class="info-card">
       <div class="info-card-label">UPDATES</div>
-      <p>If this policy changes materially, the updated version will be posted at this URL with a new effective date. Continued use of the app after changes constitutes acceptance. Since we collect no data, changes are unlikely to affect your privacy in practice.</p>
+      <p>If this policy changes materially, the updated version will be posted at this URL (and bundled with the next app update) with a new effective date. Continued use of the app after changes constitutes acceptance. Since we collect no data, changes are unlikely to affect your privacy in practice.</p>
     </div>
   </div>
 
-  <!-- 10. Contact -->
   <div class="section">
     <div class="section-header">
-      <span class="section-num">10</span>
+      <span class="section-num">13</span>
+      <span class="section-title">Governing law</span>
+    </div>
+    <div class="info-card">
+      <p>This policy is governed by the laws of India, without regard to conflict-of-law principles, without prejudice to any mandatory data-protection rights you may have under the law of your own country of residence.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">14</span>
       <span class="section-title">Contact</span>
     </div>
     <div class="contact-card">
       <div class="icon">✉️</div>
       <h3>Questions about this policy?</h3>
-      <p>If you have any questions or concerns about how SecureVaultX handles your data, reach out directly.</p>
+      <p>If you have any questions or concerns about this Privacy Policy or how SecureVaultX handles your data, reach out and we'll get back to you.</p>
       <a href="mailto:support@veyoraa.in">support@veyoraa.in</a>
     </div>
   </div>
@@ -638,7 +671,7 @@
 </main>
 
 <footer>
-  <span>SecureVaultX</span> · Privacy Policy · Effective June 2026 · com.veyoraa.securevaultx
+  © 2026 <span>SecureVaultX</span> — Veyoraa. All rights reserved.
 </footer>
 
 </body>
