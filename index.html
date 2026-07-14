@@ -341,7 +341,7 @@
   </p>
   <div class="hero-meta">
     <div class="hero-meta-item">EFFECTIVE <span>June 2026</span></div>
-    <div class="hero-meta-item">VERSION <span>1.1</span></div>
+    <div class="hero-meta-item">VERSION <span>1.2</span></div>
     <div class="hero-meta-item">PACKAGE <span>com.veyoraa.securevaultx</span></div>
   </div>
 </header>
@@ -541,8 +541,12 @@
             <td>Haptic feedback on passcode input</td>
           </tr>
           <tr>
-            <td>RECEIVE_BOOT_COMPLETED / WAKE_LOCK / FOREGROUND_SERVICE</td>
-            <td>Automatic Backup (Pro) scheduling, so a scheduled backup can run after a reboot</td>
+            <td>RECEIVE_BOOT_COMPLETED / WAKE_LOCK / FOREGROUND_SERVICE / FOREGROUND_SERVICE_DATA_SYNC</td>
+            <td>Automatic Backup (Pro) scheduling and running as a background service, including after a reboot</td>
+          </tr>
+          <tr>
+            <td>POST_NOTIFICATIONS</td>
+            <td>Shows the "Backing up your vault…" progress notification while Automatic Backup runs</td>
           </tr>
           <tr>
             <td>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</td>
@@ -550,7 +554,7 @@
           </tr>
           <tr>
             <td>INTERNET</td>
-            <td>Google Fonts (loaded at build time, not runtime) and Google Play Billing for Pro purchases</td>
+            <td>Google Fonts (loaded at build time, not runtime) and Google Play Billing for Pro and coffee-tip purchases</td>
           </tr>
         </tbody>
       </table>
@@ -572,7 +576,7 @@
     </div>
     <div class="info-card" style="margin-top:12px">
       <div class="info-card-label">AUTOMATIC BACKUP (PRO)</div>
-      <p>If you enable Automatic Backup, encrypted backup files are created on a schedule and saved directly to a local folder on your device (Download/SecureVaultX). This happens entirely on-device — no backup file, encrypted or otherwise, is ever uploaded anywhere by us.</p>
+      <p>If you enable Automatic Backup, encrypted backup files are created on a schedule and saved directly to a local folder on your device (Download/SecureVaultX). You can choose what's included (everything, passwords &amp; notes only, or excluding videos) in Settings → Automatic Backup → Backup Content. This happens entirely on-device — no backup file, encrypted or otherwise, is ever uploaded anywhere by us.</p>
     </div>
   </div>
 
@@ -582,8 +586,16 @@
       <span class="section-title">In-app purchases</span>
     </div>
     <div class="info-card">
-      <div class="info-card-label">GOOGLE PLAY BILLING</div>
-      <p>The Pro upgrade (one-time payment) is processed entirely through Google Play Billing. SecureVaultX never handles payment information directly. Google's privacy policy governs that transaction. We receive only a confirmation that a purchase was made — no card, bank, or payment details.</p>
+      <div class="info-card-label">PRO — ONE-TIME PURCHASE</div>
+      <p>The Pro upgrade (one-time payment) unlocks App Disguise and Automatic Backup together, processed entirely through Google Play Billing. SecureVaultX never handles payment information directly. We receive only a confirmation that a purchase was made — no card, bank, or payment details.</p>
+    </div>
+    <div class="info-card" style="margin-top:12px">
+      <div class="info-card-label">BUY ME A COFFEE — OPTIONAL TIPS</div>
+      <p>SecureVaultX also offers optional, repeatable tip purchases (Small/Medium/Large "coffee") through the same Google Play Billing system. These are entirely separate from Pro: tipping unlocks no feature and is never required. Each tip is a standalone, one-time, re-purchasable transaction — you can tip more than once if you'd like.</p>
+    </div>
+    <div class="info-card" style="margin-top:12px">
+      <div class="info-card-label">REFUNDS</div>
+      <p>Refunds for both Pro and coffee-tip purchases are handled entirely by Google Play under their standard refund policy — the developer does not process or control refunds directly. Contact Google Play support within 48 hours of purchase for refund requests.</p>
     </div>
   </div>
 
